@@ -1,0 +1,39 @@
+name: antibody_classifier
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+
+dependencies:
+  # Python
+  - python=3.9
+
+  # PyTorch (CPU version)
+  - pytorch>=1.12.0
+  - torchvision>=0.13.0
+  - torchaudio>=0.12.0
+  - cpuonly
+
+  # Core scientific computing
+  - numpy>=1.21.0
+  - pandas>=1.3.0
+  - scipy>=1.7.0
+
+  # Machine learning
+  - scikit-learn>=1.0.0
+  - xgboost>=1.6.0
+  - lightgbm>=3.3.0
+
+  # Visualisation
+  - plotly>=5.0.0
+  - matplotlib>=3.4.0
+  - seaborn>=0.11.0
+
+  # Utilities
+  - tqdm>=4.62.0
+
+  # Pip dependencies (not available in conda)
+  - pip
+  - pip:
+    - fair-esm>=2.0.0
+    - kaleido>=0.2.1
